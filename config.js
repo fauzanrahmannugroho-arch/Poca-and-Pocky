@@ -3,7 +3,7 @@
 // =====================================================================
 //  Tempel URL Web App Apps Script yang BARU di bawah ini
 //  (lihat PANDUAN.md, Langkah 4). Bentuknya:
-//    https://script.google.com/macros/s/AKfycbxpU9AifcuhWDc3EX8pdcXkkwMfjl65Yp2P0wv8QuZ1G95DjJh8dMBQlDKybjiGFjU-/exec
+//         WEBAPP_URL: "https://script.google.com/macros/s/AKfycbxpU9AifcuhWDc3EX8pdcXkkwMfjl65Yp2P0wv8QuZ1G95DjJh8dMBQlDKybjiGFjU-/exec"
 //
 //  JANGAN taruh PIN atau token di file ini — file ini ikut publik di GitHub.
 //  PIN hanya ada di Code.gs (Apps Script) dan di kepala Anda.
