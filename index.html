@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tabungan Fauzan &amp; Hafizha</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">💍</span>
+      <div class="brand-text">
+        <span class="script">Tabungan</span>
+        <strong>Fauzan &amp; Hafizha</strong>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Beranda</a>
+      <a href="riwayat.html">Riwayat</a>
+      <a href="momen.html">Momen</a>
+      <a href="pengaturan.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="flash"></div>
+
+    <!-- ============ HERO / LANDING ============ -->
+    <section class="hero">
+      <!-- siluet foto di background hero (diisi setelah data dimuat) -->
+      <div class="hero-photos" aria-hidden="true">
+        <div class="hero-photo left"  id="hero-left"></div>
+        <div class="hero-photo right" id="hero-right"></div>
+      </div>
+
+      <div class="hero-inner">
+        <p class="hero-kicker">✨ Menuju Hari Bahagia ✨</p>
+        <h1 class="hero-title">Tabungan Fauzan &amp; Hafizha</h1>
+        <p class="hero-sub">Mencatat setiap langkah kecil menuju impian besar kita berdua 💍</p>
+      </div>
+    </section>
+
+    <!-- ============ FOTO PASANGAN (kolom siluet) ============ -->
+    <section class="couple-strip" id="couple-strip" hidden>
+      <figure class="couple-frame">
+        <img id="couple-1" alt="Fauzan &amp; Hafizha">
+        <span class="couple-caption">💛 Bersama menuju impian</span>
+      </figure>
+      <figure class="couple-frame">
+        <img id="couple-2" alt="Fauzan &amp; Hafizha">
+        <span class="couple-caption">💙 Selangkah lebih dekat</span>
+      </figure>
+    </section>
+
+    <!-- ============ RINGKASAN & PROGRESS ============ -->
+    <section class="card progress-card" id="progress-card">
+      <p class="empty">Memuat data… ⏳</p>
+    </section>
+
+    <!-- ============ FORM TAMBAH PEMASUKAN ============ -->
+    <section class="card">
+      <h3 class="section-title">➕ Catat Pemasukan Baru</h3>
+      <form id="form-tambah" class="form-grid" novalidate>
+        <div class="field">
+          <label>Tanggal</label>
+          <input type="date" name="tanggal" required>
+        </div>
+        <div class="field">
+          <label>Siapa yang menabung?</label>
+          <select name="penabung" required>
+            <option value="" disabled selected>— pilih —</option>
+            <option value="ojan">Fauzan (Ojan)</option>
+            <option value="nana">Hafizha (Nana)</option>
+            <option value="emas">Untung Emas</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Nominal (Rp)</label>
+          <input type="number" name="nominal" placeholder="contoh: 500000" min="1" required>
+        </div>
+        <div class="field">
+          <label>Sumber Dana</label>
+          <input type="text" name="sumber" placeholder="Gaji, bonus, THR, dll">
+        </div>
+        <div class="field full">
+          <label>Keterangan</label>
+          <input type="text" name="keterangan" placeholder="Catatan tambahan (opsional)">
+        </div>
+        <div class="field full">
+          <label>Bukti Transfer (opsional — jpg/png/pdf)</label>
+          <input type="file" name="bukti" accept=".jpg,.jpeg,.png,.gif,.webp,.pdf">
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary" id="btn-tambah">Simpan Pemasukan 💾</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============ PEMASUKAN TERBARU ============ -->
+    <section class="card">
+      <div class="section-head">
+        <h3 class="section-title">🕒 Pemasukan Terbaru</h3>
+        <a href="riwayat.html" class="link-more">Lihat semua →</a>
+      </div>
+      <div id="latest"><p class="empty">Memuat data… ⏳</p></div>
+    </section>
+
+    <!-- ============ SNEAK PEEK MOMEN ============ -->
+    <section class="card" id="momen-card" hidden>
+      <div class="section-head">
+        <h3 class="section-title">💕 Momen Bahagia</h3>
+        <a href="momen.html" class="link-more">Lihat galeri →</a>
+      </div>
+      <div class="momen-grid" id="momen-preview"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dibuat dengan 💕 untuk perjalanan menuju hari bahagia Fauzan &amp; Hafizha</p>
+    <p class="lock"><a href="#" id="lock-link">🔒 Kunci</a></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

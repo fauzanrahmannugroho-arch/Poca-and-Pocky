@@ -1,0 +1,293 @@
+/* ============================================================
+   TABUNGAN FAUZAN & HAFIZHA  —  Tema Pink & Biru
+   ============================================================ */
+:root{
+  --pink:        #ff6fa5;
+  --pink-soft:   #ffd0e2;
+  --pink-bg:     #fff0f6;
+  --blue:        #4d7cff;
+  --blue-soft:   #cdddff;
+  --blue-bg:     #eef4ff;
+  --ink:         #3a2f3d;
+  --muted:       #8a7f8f;
+  --white:       #ffffff;
+  --radius:      20px;
+  --shadow:      0 10px 30px rgba(255,111,165,.15), 0 4px 12px rgba(77,124,255,.10);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--ink);
+  background:linear-gradient(135deg, var(--pink-bg) 0%, var(--blue-bg) 100%);
+  min-height:100vh;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* pattern hati samar di background */
+.bg-hearts{
+  position:fixed; inset:0; z-index:-1; opacity:.4;
+  background-image:radial-gradient(circle at 20% 30%, var(--pink-soft) 0, transparent 25%),
+                   radial-gradient(circle at 80% 70%, var(--blue-soft) 0, transparent 25%),
+                   radial-gradient(circle at 60% 20%, var(--pink-soft) 0, transparent 20%);
+}
+
+/* ---------------- TOP BAR ---------------- */
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px;
+  padding:16px 28px;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(10px);
+  border-bottom:2px solid var(--pink-soft);
+  position:sticky; top:0; z-index:50;
+}
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand-mark{ font-size:28px; }
+.brand-text{ display:flex; flex-direction:column; line-height:1.1; }
+.brand-text .script{
+  font-family:'Great Vibes',cursive; font-size:20px; color:var(--pink);
+}
+.brand-text strong{
+  font-size:18px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.nav{ display:flex; gap:6px; flex-wrap:wrap; }
+.nav a{
+  text-decoration:none; color:var(--ink); font-weight:500; font-size:14px;
+  padding:8px 16px; border-radius:999px; transition:.2s;
+}
+.nav a:hover{ background:var(--pink); color:#fff; }
+
+/* ---------------- CONTAINER ---------------- */
+.container{ max-width:920px; margin:0 auto; padding:28px 18px 60px; }
+
+/* ---------------- HERO ---------------- */
+.hero{
+  text-align:center; padding:44px 20px;
+  background:linear-gradient(135deg, var(--pink) 0%, var(--blue) 100%);
+  border-radius:var(--radius); box-shadow:var(--shadow); color:#fff;
+  margin-bottom:24px; position:relative; overflow:hidden;
+}
+.hero::before{
+  content:"💕 💍 💐 💒 💕 💍 💐 💒"; position:absolute; top:8px; left:0;
+  font-size:22px; opacity:.25; white-space:nowrap;
+}
+/* siluet foto pasangan di background hero */
+.hero-photos{
+  position:absolute; inset:0; display:flex; justify-content:space-between;
+  z-index:0; pointer-events:none;
+}
+.hero-photo{
+  width:38%; height:100%;
+  background-size:cover; background-position:center top;
+  opacity:.32; filter:contrast(1.05);
+}
+.hero-photo.left{
+  -webkit-mask-image:linear-gradient(to right, #000 40%, transparent 100%);
+          mask-image:linear-gradient(to right, #000 40%, transparent 100%);
+}
+.hero-photo.right{
+  -webkit-mask-image:linear-gradient(to left, #000 40%, transparent 100%);
+          mask-image:linear-gradient(to left, #000 40%, transparent 100%);
+}
+.hero-inner{ position:relative; z-index:2; }
+
+.hero-kicker{ font-size:14px; letter-spacing:1px; opacity:.95; }
+.hero-title{
+  font-family:'Great Vibes',cursive; font-size:52px; margin:6px 0; line-height:1.1;
+  text-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+.hero-sub{ font-size:15px; opacity:.95; }
+
+/* ---------------- COUPLE STRIP (foto pasangan) ---------------- */
+.couple-strip{
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;
+}
+.couple-frame{
+  position:relative; border-radius:var(--radius); overflow:hidden;
+  box-shadow:var(--shadow); border:3px solid #fff;
+}
+.couple-frame img{
+  width:100%; height:260px; object-fit:cover; display:block;
+  transition:transform .5s ease;
+}
+.couple-frame:hover img{ transform:scale(1.06); }
+.couple-caption{
+  position:absolute; left:0; right:0; bottom:0;
+  padding:22px 14px 12px; color:#fff; font-size:14px; font-weight:500;
+  background:linear-gradient(to top, rgba(58,47,61,.75), transparent);
+}
+
+/* ---------------- CARD ---------------- */
+.card{
+  background:var(--white); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:26px; margin-bottom:22px;
+  border:1px solid rgba(255,111,165,.12);
+}
+.section-title{ font-size:18px; margin-bottom:16px; color:var(--ink); }
+.section-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:8px; }
+.section-head .section-title{ margin-bottom:0; }
+.link-more{ color:var(--blue); text-decoration:none; font-weight:500; font-size:14px; }
+.link-more:hover{ text-decoration:underline; }
+
+/* ---------------- PROGRESS ---------------- */
+.progress-card{ background:linear-gradient(135deg,#fff 60%, var(--pink-bg)); }
+.progress-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
+.label{ font-size:13px; color:var(--muted); }
+.big-amount{
+  font-size:34px; margin:2px 0;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.muted{ color:var(--muted); font-size:13px; }
+.progress-percent{
+  font-size:30px; font-weight:700; color:var(--pink);
+}
+.progress-bar{
+  height:22px; background:var(--blue-bg); border-radius:999px; overflow:hidden;
+  box-shadow:inset 0 2px 6px rgba(0,0,0,.06);
+}
+.progress-fill{
+  height:100%; border-radius:999px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  transition:width .8s ease; min-width:6px;
+  box-shadow:0 0 12px rgba(255,111,165,.5);
+}
+
+.stat-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:20px;
+}
+.stat{
+  background:var(--blue-bg); border-radius:14px; padding:14px; text-align:center;
+}
+.stat-label{ display:block; font-size:12px; color:var(--muted); margin-bottom:4px; }
+.stat-value{ font-weight:600; font-size:15px; }
+.note-box{
+  margin-top:16px; padding:12px 16px; border-radius:12px;
+  background:var(--pink-bg); border-left:4px solid var(--pink); font-size:14px;
+}
+
+/* ---------------- FORM ---------------- */
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field.full{ grid-column:1 / -1; }
+.field label{ font-size:13px; font-weight:500; color:var(--muted); }
+.field input{
+  padding:11px 14px; border:2px solid var(--blue-soft); border-radius:12px;
+  font-family:inherit; font-size:14px; transition:.2s; background:#fdfdff;
+}
+.field input:focus{ outline:none; border-color:var(--pink); box-shadow:0 0 0 3px var(--pink-soft); }
+
+/* ---------------- BUTTON ---------------- */
+.btn{
+  display:inline-block; padding:12px 24px; border:none; border-radius:999px;
+  font-family:inherit; font-size:15px; font-weight:600; cursor:pointer;
+  text-decoration:none; transition:.2s; text-align:center;
+}
+.btn-primary{
+  background:linear-gradient(90deg,var(--pink),var(--blue)); color:#fff;
+  box-shadow:0 6px 18px rgba(255,111,165,.4);
+}
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(77,124,255,.4); }
+.btn-ghost{
+  background:transparent; color:var(--blue); border:2px solid var(--blue-soft); margin-left:8px;
+}
+.btn-ghost:hover{ background:var(--blue-bg); }
+
+/* ---------------- TABLE ---------------- */
+.table-wrap{ overflow-x:auto; }
+.table{ width:100%; border-collapse:collapse; font-size:14px; }
+.table th{
+  text-align:left; padding:10px 12px; color:var(--muted); font-weight:500;
+  border-bottom:2px solid var(--pink-soft); font-size:13px;
+}
+.table td{ padding:12px; border-bottom:1px solid #f2eef4; }
+.table tr:hover td{ background:var(--pink-bg); }
+.right{ text-align:right; }
+.amount-plus{ color:#1f9d55; font-weight:600; }
+.total-badge{
+  background:linear-gradient(90deg,var(--pink),var(--blue)); color:#fff;
+  padding:6px 16px; border-radius:999px; font-size:14px; font-weight:600;
+}
+
+.chip{
+  display:inline-block; padding:5px 12px; border-radius:999px; font-size:12px;
+  background:var(--blue-bg); color:var(--blue); text-decoration:none; font-weight:500;
+}
+.chip:hover{ background:var(--blue); color:#fff; }
+.chip-danger{ background:#ffe1e8; color:#e14b6a; }
+.chip-danger:hover{ background:#e14b6a; color:#fff; }
+
+.empty{ text-align:center; color:var(--muted); padding:24px; font-size:15px; }
+
+/* ---------------- MOMEN GALLERY ---------------- */
+.momen-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.momen-grid.big{ grid-template-columns:repeat(2,1fr); }
+.momen-item{ border-radius:16px; overflow:hidden; box-shadow:var(--shadow); background:#fff; }
+.momen-item img{ width:100%; height:180px; object-fit:cover; display:block; }
+.momen-grid.big .momen-item img{ height:240px; }
+.momen-item figcaption{ padding:10px 14px; font-size:13px; }
+.card-momen figcaption strong{ display:block; font-size:15px; margin-bottom:2px; }
+.momen-date{ font-size:12px; color:var(--muted); }
+.card-momen figcaption p{ font-size:13px; color:var(--muted); margin:6px 0; }
+
+/* ---------------- FLASH ---------------- */
+.flash{
+  padding:14px 18px; border-radius:14px; margin-bottom:16px; font-size:14px; font-weight:500;
+  animation:slidein .4s ease;
+}
+.flash-success{ background:#e3f9ec; color:#1f9d55; border-left:4px solid #1f9d55; }
+.flash-error{ background:#ffe1e8; color:#e14b6a; border-left:4px solid #e14b6a; }
+@keyframes slidein{ from{opacity:0; transform:translateY(-8px);} to{opacity:1; transform:translateY(0);} }
+
+/* ---------------- FOOTER ---------------- */
+.footer{ text-align:center; padding:24px; color:var(--muted); font-size:13px; }
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width:640px){
+  .form-grid{ grid-template-columns:1fr; }
+  .stat-grid{ grid-template-columns:repeat(2,1fr); }
+  .momen-grid, .momen-grid.big{ grid-template-columns:1fr 1fr; }
+  .hero-title{ font-size:40px; }
+  .big-amount{ font-size:28px; }
+  .couple-frame img{ height:200px; }
+}
+
+
+/* ============================================================
+   TAMBAHAN VERSI GITHUB PAGES
+   (bagian di atas ini sama persis dengan versi Flask; yang di
+    bawah hanya untuk layar PIN, status memuat, dan tombol Kunci)
+   ============================================================ */
+[hidden]{ display:none !important; }
+
+.gate{
+  position:fixed; inset:0; z-index:100;
+  display:flex; align-items:center; justify-content:center; padding:18px;
+  background:linear-gradient(135deg, var(--pink-bg) 0%, var(--blue-bg) 100%);
+}
+.gate-card{ width:100%; max-width:380px; text-align:center; margin-bottom:0; }
+.gate-card .brand-mark{ font-size:44px; display:block; margin-bottom:6px; }
+.gate-card .script{ font-family:'Great Vibes',cursive; font-size:30px; color:var(--pink); line-height:1.1; }
+.gate-card h1{
+  font-size:20px; margin-bottom:6px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.gate-card p{ font-size:14px; color:var(--muted); margin-bottom:16px; }
+.gate-card .field{ text-align:left; margin-bottom:12px; }
+.gate-card .btn{ width:100%; }
+.gate-check{
+  display:flex; align-items:center; gap:8px; justify-content:flex-start;
+  font-size:13px; color:var(--muted); margin-bottom:14px; cursor:pointer;
+}
+.gate-error{ color:#e14b6a; font-size:13px; min-height:18px; margin-bottom:8px; }
+
+.btn:disabled{ opacity:.65; cursor:wait; transform:none; }
+.footer a{ color:var(--blue); text-decoration:none; font-weight:500; }
+.footer a:hover{ text-decoration:underline; }
+.footer .lock{ margin-top:6px; }

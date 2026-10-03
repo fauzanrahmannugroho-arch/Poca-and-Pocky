@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pengaturan — Tabungan Fauzan &amp; Hafizha</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="pengaturan">
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">💍</span>
+      <div class="brand-text">
+        <span class="script">Tabungan</span>
+        <strong>Fauzan &amp; Hafizha</strong>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Beranda</a>
+      <a href="riwayat.html">Riwayat</a>
+      <a href="momen.html">Momen</a>
+      <a href="pengaturan.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="flash"></div>
+
+    <section class="card">
+      <h3 class="section-title">🎯 Pengaturan Target Tabungan</h3>
+      <form id="form-pengaturan" class="form-grid" novalidate>
+        <div class="field full">
+          <label>Target Nominal yang Ingin Dicapai (Rp)</label>
+          <input type="number" name="target" min="0" required disabled>
+        </div>
+        <div class="field full">
+          <label>Catatan / Motivasi</label>
+          <input type="text" name="catatan" placeholder="contoh: Target menikah Desember 2026 💒" disabled>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary" id="btn-pengaturan" disabled>Simpan Pengaturan 💾</button>
+          <a href="index.html" class="btn btn-ghost">Batal</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dibuat dengan 💕 untuk perjalanan menuju hari bahagia Fauzan &amp; Hafizha</p>
+    <p class="lock"><a href="#" id="lock-link">🔒 Kunci</a></p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
